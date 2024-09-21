@@ -87,6 +87,10 @@ class Cart(models.Model):
     @property
     def total_cost(self):
         return self.quantity * self.product.discounted_price
+    
+class CartManagementModels(models.Model):
+    user = models.ForeignKey(User,on_delete=models.CASCADE, null=True)
+    add_to_cart = models.JSONField(default=list)
 
 STATUS_CHOICES = (
     ('Accepted','Accepted'),

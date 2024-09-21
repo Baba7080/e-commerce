@@ -20,4 +20,5 @@ class OrderPlacedModelAdmin(admin.ModelAdmin):
     list_display = ['id','user','customer','product','quantity','ordered_date','status']
 
 admin.site.register(CategoryModel)
+admin.site.register(CartManagementModels)
 
